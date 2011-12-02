@@ -1,0 +1,13 @@
+--- crash-trace-command-1.0/Makefile.orig
++++ crash-trace-command-1.0/Makefile
+@@ -18,6 +18,10 @@ ifeq ($(shell arch), s390x)
+   TARGET=S390X
+   TARGET_CFLAGS=
+ endif
++ifeq ($(shell arch), s390)
++  TARGET=S390
++  TARGET_CFLAGS=
++endif
+ 
+ INCDIR=/usr/include/crash
+ 
